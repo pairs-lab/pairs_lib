@@ -1,0 +1,7 @@
+# Local rosdep rules for PAIRS packages that are not in the public rosdep index.
+# Lets bloom/rosdep resolve inter-package dependencies (e.g. pairs_lib -> pairs_msgs)
+# to their generated Debian package names during the .deb build (ROS 2 Jazzy).
+pairs_msgs:
+  ubuntu: [ros-jazzy-pairs-msgs]
+pairs_lib:
+  ubuntu: [ros-jazzy-pairs-lib]
