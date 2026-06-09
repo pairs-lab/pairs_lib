@@ -38,7 +38,6 @@
   <test_depend>ament_cmake_clang_format</test_depend>
   <test_depend>ament_cmake_xmllint</test_depend>
 
-  <build_export_depend>mrs_cmake</build_export_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

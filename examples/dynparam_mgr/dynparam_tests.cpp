@@ -19,7 +19,7 @@ int main(int argc, char** argv)
   auto dynparam_mgr = pairs_lib::DynparamMgr(node, mtx);
   auto& param_provider = dynparam_mgr.get_param_provider();
 
-  param_provider.addYamlFile("/home/matous/workspace/src/mrs_uav_core/ros_packages/pairs_lib/test/param_loader/test_config.yaml");
+  param_provider.addYamlFile("test/param_loader/test_config.yaml");
 
   int test_int;
 

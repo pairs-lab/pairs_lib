@@ -625,9 +625,9 @@ TEST_F(Test, transform_single)
 
 //}
 
-/* TEST_F(Test, mrs_reference_test) //{ */
+/* TEST_F(Test, pairs_reference_test) //{ */
 
-TEST_F(Test, mrs_reference_test)
+TEST_F(Test, pairs_reference_test)
 {
 
   initialize(rclcpp::NodeOptions().use_intra_process_comms(false));

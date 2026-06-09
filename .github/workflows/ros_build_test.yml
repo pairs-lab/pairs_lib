@@ -1,16 +1,12 @@
-name: ros_build_test
+name: ros2_build_test
 
 on:
-
   push:
-    branches: [ ros2_devel ]
-
+    branches: [ devel ]
     paths-ignore:
       - '**/README.md'
-
   pull_request:
     branches: [ ros2 ]
-
   workflow_dispatch:
 
 concurrency:
@@ -19,5 +15,28 @@ concurrency:
 
 jobs:
 
-  build:
-    uses: ctu-mrs/ci_scripts/.github/workflows/ros_build_test.yml@ros2
+  build_and_test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up ROS 2 Jazzy
+        uses: ros-tooling/setup-ros@v0.7
+        with:
+          required-ros-distributions: jazzy
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install -y python3-colcon-common-extensions python3-rosdep \
+            libyaml-cpp-dev libeigen3-dev libopencv-dev
+          rosdep update
+
+      - name: Build and test
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          mkdir -p ~/colcon_ws/src
+          cp -r . ~/colcon_ws/src/pairs_lib
+          cd ~/colcon_ws
+          rosdep install --from-paths src --ignore-src -r -y || true
+          colcon build --packages-select pairs_lib
+          colcon test --packages-select pairs_lib --return-code-on-test-failure
