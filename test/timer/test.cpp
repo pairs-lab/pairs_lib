@@ -12,7 +12,7 @@
 using namespace pairs_lib;
 using namespace std;
 
-std::unique_ptr<pairs_lib::MRSTimer> timer = nullptr;
+std::unique_ptr<pairs_lib::PAIRSTimer> timer = nullptr;
 std::atomic<bool> test_stop_from_cbk;
 
 struct obj_t

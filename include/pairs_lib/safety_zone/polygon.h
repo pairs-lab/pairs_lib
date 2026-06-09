@@ -1,6 +1,6 @@
 // clang: TomasFormat
-#ifndef MRS_LIB_POLYGON_H
-#define MRS_LIB_POLYGON_H
+#ifndef PAIRS_LIB_POLYGON_H
+#define PAIRS_LIB_POLYGON_H
 
 #include <ros/ros.h>
 #include <eigen3/Eigen/Eigen>
@@ -49,4 +49,4 @@ public:
 };
 }  // namespace pairs_lib
 
-#endif  // MRS_LIB_POLYGON_H
+#endif  // PAIRS_LIB_POLYGON_H

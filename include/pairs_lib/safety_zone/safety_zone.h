@@ -1,6 +1,6 @@
 // clang: TomasFormat
-#ifndef MRS_LIB_SAFETYZONE_H
-#define MRS_LIB_SAFETYZONE_H
+#ifndef PAIRS_LIB_SAFETYZONE_H
+#define PAIRS_LIB_SAFETYZONE_H
 
 #include <pairs_lib/safety_zone/polygon.h>
 #include <visualization_msgs/Marker.h>
@@ -34,4 +34,4 @@ public:
 };
 }  // namespace pairs_lib
 
-#endif  // MRS_LIB_SAFETYZONE_H
+#endif  // PAIRS_LIB_SAFETYZONE_H

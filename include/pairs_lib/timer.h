@@ -1,5 +1,5 @@
-#ifndef MRS_TIMER_H
-#define MRS_TIMER_H
+#ifndef PAIRS_TIMER_H
+#define PAIRS_TIMER_H
 
 #include <ros/ros.h>
 #include <thread>
@@ -18,7 +18,7 @@ namespace pairs_lib
    *
    * @note Functionality of the two implementations differs in some details.
    */
-  class MRSTimer
+  class PAIRSTimer
   {
     public:
     using callback_t = std::function<void(const ros::TimerEvent&)>;
@@ -57,14 +57,14 @@ namespace pairs_lib
      */
     virtual bool running() = 0;
 
-    virtual ~MRSTimer() = default;
-    MRSTimer(const MRSTimer&) = default;
-    MRSTimer(MRSTimer&&) = default;
-    MRSTimer& operator=(const MRSTimer&) = default;
-    MRSTimer& operator=(MRSTimer&&) = default;
+    virtual ~PAIRSTimer() = default;
+    PAIRSTimer(const PAIRSTimer&) = default;
+    PAIRSTimer(PAIRSTimer&&) = default;
+    PAIRSTimer& operator=(const PAIRSTimer&) = default;
+    PAIRSTimer& operator=(PAIRSTimer&&) = default;
 
     protected:
-    MRSTimer() = default;
+    PAIRSTimer() = default;
   };
 
   // | ------------------------ ROSTimer ------------------------ |
@@ -74,7 +74,7 @@ namespace pairs_lib
   /**
    * @brief ros::Timer wrapper. The interface is the same as with ros::Timer, except for the initialization method.
    */
-  class ROSTimer : public MRSTimer {
+  class ROSTimer : public PAIRSTimer {
   public:
     ROSTimer();
 
@@ -164,7 +164,7 @@ namespace pairs_lib
   /**
    * @brief Custom thread-based Timers with the same interface as pairs_lib::ROSTimer.
    */
-  class ThreadTimer : public MRSTimer {
+  class ThreadTimer : public PAIRSTimer {
 
   public:
     ThreadTimer();
@@ -266,4 +266,4 @@ namespace pairs_lib
 
 }  // namespace pairs_lib
 
-#endif  // MRS_TIMER_H
+#endif  // PAIRS_TIMER_H

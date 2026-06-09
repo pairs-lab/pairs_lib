@@ -1,6 +1,6 @@
 // clang: TomasFormat
-#ifndef MRS_LIB_LINE_OPERATIONS_H
-#define MRS_LIB_LINE_OPERATIONS_H
+#ifndef PAIRS_LIB_LINE_OPERATIONS_H
+#define PAIRS_LIB_LINE_OPERATIONS_H
 
 #include <eigen3/Eigen/Eigen>
 

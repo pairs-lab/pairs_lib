@@ -1,5 +1,5 @@
-#ifndef MRS_TIMER_HPP
-#define MRS_TIMER_HPP
+#ifndef PAIRS_TIMER_HPP
+#define PAIRS_TIMER_HPP
 
 // | ------------------------ ROSTimer ------------------------ |
 
@@ -93,4 +93,4 @@ ThreadTimer::ThreadTimer([[maybe_unused]] const ros::NodeHandle& nh, const ros::
 
 //}
 
-#endif  // MRS_TIMER_HPP
+#endif  // PAIRS_TIMER_HPP

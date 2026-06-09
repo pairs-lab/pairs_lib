@@ -3,8 +3,8 @@
  *   \brief utility functions for getting stuff from ROS msgs
  *   \author Tomas Baca - tomas.baca@fel.cvut.cz
  */
-#ifndef MRS_LIB_MSG_EXTRACTOR_H
-#define MRS_LIB_MSG_EXTRACTOR_H
+#ifndef PAIRS_LIB_MSG_EXTRACTOR_H
+#define PAIRS_LIB_MSG_EXTRACTOR_H
 
 #include <pairs_msgs/TrackerCommand.h>
 #include <pairs_msgs/Reference.h>
@@ -688,4 +688,4 @@ double getHeading(const pairs_msgs::ReferenceStampedConstPtr& data) {
 
 //}
 
-#endif  // MRS_LIB_MSG_EXTRACTOR_H
+#endif  // PAIRS_LIB_MSG_EXTRACTOR_H
