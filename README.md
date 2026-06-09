@@ -4,7 +4,7 @@ PAIRS shared C++ utility library — attitude math, filters, parameter loading, 
 
 Ported from the BSD-3-Clause [ctu-mrs/mrs_lib](https://github.com/ctu-mrs/mrs_lib) and adapted for the PAIRS platform (`mrs_lib` → `pairs_lib`, `mrs_msgs` → `pairs_msgs`).
 
-This is the **ros2** branch (ROS 2 Jazzy, ament_cmake). For ROS 1 Noetic (catkin), see the `master` branch.
+This is the **ros2** branch (ROS 2 Jazzy, ament_cmake). For ROS 1 Noetic (catkin), see the `ros1` branch.
 
 ## License
 
