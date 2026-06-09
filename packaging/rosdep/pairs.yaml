@@ -1,0 +1,7 @@
+# Local rosdep rules for PAIRS packages that are not in the public rosdep index.
+# This lets bloom/rosdep resolve inter-package dependencies (e.g. pairs_lib -> pairs_msgs)
+# to their generated Debian package names during the .deb build.
+pairs_msgs:
+  ubuntu: [ros-noetic-pairs-msgs]
+pairs_lib:
+  ubuntu: [ros-noetic-pairs-lib]
