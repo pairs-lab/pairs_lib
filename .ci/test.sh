@@ -11,9 +11,9 @@ distro=`lsb_release -r | awk '{ print $2 }'`
 
 echo "Starting test"
 
-cd ~/mrs_workspace
+cd ~/pairs_workspace
 source /opt/ros/$ROS_DISTRO/setup.bash
-source ~/mrs_workspace/devel/setup.bash
+source ~/pairs_workspace/devel/setup.bash
 
 export ROS_MASTER_URI=http://localhost:11311
 

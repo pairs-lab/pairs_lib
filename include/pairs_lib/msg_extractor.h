@@ -3,8 +3,8 @@
  *   \brief utility functions for getting stuff from ROS msgs
  *   \author Tomas Baca - tomas.baca@fel.cvut.cz
  */
-#ifndef MRS_LIB_MSG_EXTRACTOR_H
-#define MRS_LIB_MSG_EXTRACTOR_H
+#ifndef PAIRS_LIB_MSG_EXTRACTOR_H
+#define PAIRS_LIB_MSG_EXTRACTOR_H
 
 #include <pairs_msgs/msg/reference.hpp>
 #include <pairs_msgs/msg/reference_stamped.hpp>
@@ -769,4 +769,4 @@ namespace pairs_lib
 
 //}
 
-#endif // MRS_LIB_MSG_EXTRACTOR_H
+#endif // PAIRS_LIB_MSG_EXTRACTOR_H

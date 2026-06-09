@@ -1,5 +1,5 @@
-#ifndef MRS_LIB_SAFETYZONE_H
-#define MRS_LIB_SAFETYZONE_H
+#ifndef PAIRS_LIB_SAFETYZONE_H
+#define PAIRS_LIB_SAFETYZONE_H
 
 #include <map>
 #include <memory>
@@ -77,4 +77,4 @@ namespace pairs_lib
   } // namespace safety_zone
 } // namespace pairs_lib
 
-#endif // MRS_LIB_SAFETYZONE_H
+#endif // PAIRS_LIB_SAFETYZONE_H

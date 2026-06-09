@@ -178,7 +178,7 @@ protected:
 
   std::atomic<bool> test_stop_from_cbk_ = false;
 
-  std::shared_ptr<pairs_lib::MRSTimer> timer_;
+  std::shared_ptr<pairs_lib::PAIRSTimer> timer_;
 
   std::optional<rclcpp::Time> last_time_callback_;
 };
@@ -450,7 +450,7 @@ public:
     RCLCPP_INFO(node_->get_logger(), "thread joined");
   }
 
-  std::shared_ptr<pairs_lib::MRSTimer> create_timer(const pairs_lib::TimerHandlerOptions& opts, const rclcpp::Rate& rate)
+  std::shared_ptr<pairs_lib::PAIRSTimer> create_timer(const pairs_lib::TimerHandlerOptions& opts, const rclcpp::Rate& rate)
   {
     switch (GetParam())
     {

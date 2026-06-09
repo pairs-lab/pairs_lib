@@ -1,5 +1,5 @@
-#ifndef MRS_TIMER_H
-#define MRS_TIMER_H
+#ifndef PAIRS_TIMER_H
+#define PAIRS_TIMER_H
 
 #include <rclcpp/rclcpp.hpp>
 #include <mutex>
@@ -38,7 +38,7 @@ namespace pairs_lib
    *
    * @note Functionality of the two implementations differs in some details.
    */
-  class MRSTimer
+  class PAIRSTimer
   {
   public:
     using callback_t = std::function<void()>;
@@ -77,14 +77,14 @@ namespace pairs_lib
      */
     virtual bool running() = 0;
 
-    virtual ~MRSTimer() = default;
-    MRSTimer(const MRSTimer&) = default;
-    MRSTimer(MRSTimer&&) = default;
-    MRSTimer& operator=(const MRSTimer&) = default;
-    MRSTimer& operator=(MRSTimer&&) = default;
+    virtual ~PAIRSTimer() = default;
+    PAIRSTimer(const PAIRSTimer&) = default;
+    PAIRSTimer(PAIRSTimer&&) = default;
+    PAIRSTimer& operator=(const PAIRSTimer&) = default;
+    PAIRSTimer& operator=(PAIRSTimer&&) = default;
 
   protected:
-    MRSTimer() = default;
+    PAIRSTimer() = default;
 
     /**
      * @brief Create a callback for coroutine that should only run once at a time.
@@ -129,7 +129,7 @@ namespace pairs_lib
   /**
    * @brief rclcpp::Timer wrapper. The interface is the same as with rclcpp::Timer, except for the initialization method.
    */
-  class ROSTimer : public MRSTimer
+  class ROSTimer : public PAIRSTimer
   {
   public:
     ROSTimer();
@@ -236,7 +236,7 @@ namespace pairs_lib
   /**
    * @brief Custom thread-based Timers with the same interface as pairs_lib::ROSTimer.
    */
-  class ThreadTimer : public MRSTimer
+  class ThreadTimer : public PAIRSTimer
   {
 
   public:
@@ -345,8 +345,8 @@ namespace pairs_lib
 
 } // namespace pairs_lib
 
-#ifndef MRS_TIMER_HPP
+#ifndef PAIRS_TIMER_HPP
 #include <pairs_lib/impl/timer_handler.hpp>
 #endif
 
-#endif // MRS_TIMER_H
+#endif // PAIRS_TIMER_H

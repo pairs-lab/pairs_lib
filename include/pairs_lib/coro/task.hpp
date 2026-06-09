@@ -1,5 +1,5 @@
-#ifndef MRS_LIB_CORO_TASK_HPP_
-#define MRS_LIB_CORO_TASK_HPP_
+#ifndef PAIRS_LIB_CORO_TASK_HPP_
+#define PAIRS_LIB_CORO_TASK_HPP_
 
 #include <cassert>
 #include <concepts>
@@ -290,7 +290,7 @@ namespace pairs_lib
    */
   template <typename T>
     requires(std::same_as<T, std::remove_cvref_t<T>>)
-  class [[nodiscard("Task is lazy and does not run until `co_await`ed.")]] MRS_LIB_INTERNAL_CORO_RETURN_TYPE MRS_LIB_INTERNAL_CORO_LIFETIMEBOUND Task
+  class [[nodiscard("Task is lazy and does not run until `co_await`ed.")]] PAIRS_LIB_INTERNAL_CORO_RETURN_TYPE PAIRS_LIB_INTERNAL_CORO_LIFETIMEBOUND Task
   {
   public:
     using promise_type = internal::PromiseType<T>;
@@ -318,8 +318,8 @@ namespace pairs_lib
 
 } // namespace pairs_lib
 
-#ifndef MRS_LIB_CORO_TASK_IMPL_HPP_
+#ifndef PAIRS_LIB_CORO_TASK_IMPL_HPP_
 #include <pairs_lib/coro/task.impl.hpp> // IWYU pragma: export
 #endif
 
-#endif // MRS_LIB_CORO_TASK_HPP_
+#endif // PAIRS_LIB_CORO_TASK_HPP_

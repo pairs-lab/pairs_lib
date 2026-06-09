@@ -1,6 +1,6 @@
 // clang: TomasFormat
-#ifndef MRS_LIB_POLYGON_H
-#define MRS_LIB_POLYGON_H
+#ifndef PAIRS_LIB_POLYGON_H
+#define PAIRS_LIB_POLYGON_H
 
 #include <rclcpp/rclcpp.hpp>
 #include <Eigen/Core>
@@ -58,4 +58,4 @@ namespace pairs_lib
 
 } // namespace pairs_lib
 
-#endif // MRS_LIB_POLYGON_H
+#endif // PAIRS_LIB_POLYGON_H

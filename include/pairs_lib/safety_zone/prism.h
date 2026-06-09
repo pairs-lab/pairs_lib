@@ -1,5 +1,5 @@
-#ifndef MRS_PRISM_H
-#define MRS_PRISM_H
+#ifndef PAIRS_PRISM_H
+#define PAIRS_PRISM_H
 
 #include <boost/geometry.hpp>
 #include <boost/geometry/algorithms/centroid.hpp>

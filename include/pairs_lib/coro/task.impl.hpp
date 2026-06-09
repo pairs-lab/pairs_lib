@@ -1,5 +1,5 @@
-#ifndef MRS_LIB_CORO_TASK_IMPL_HPP_
-#define MRS_LIB_CORO_TASK_IMPL_HPP_
+#ifndef PAIRS_LIB_CORO_TASK_IMPL_HPP_
+#define PAIRS_LIB_CORO_TASK_IMPL_HPP_
 
 #include <pairs_lib/coro/internal/thread_local_continuation_scheduler.hpp>
 #include <pairs_lib/coro/task.hpp>
@@ -82,4 +82,4 @@ namespace pairs_lib
 } // namespace pairs_lib
 
 
-#endif // MRS_LIB_CORO_TASK_IMPL_HPP_
+#endif // PAIRS_LIB_CORO_TASK_IMPL_HPP_

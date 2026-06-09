@@ -1,5 +1,5 @@
-#ifndef MRS_LIB_CORO_RUNNERS_HPP_
-#define MRS_LIB_CORO_RUNNERS_HPP_
+#ifndef PAIRS_LIB_CORO_RUNNERS_HPP_
+#define PAIRS_LIB_CORO_RUNNERS_HPP_
 
 #include <concepts>
 #include <coroutine>
@@ -89,4 +89,4 @@ namespace pairs_lib
 
 } // namespace pairs_lib
 
-#endif // MRS_LIB_CORO_RUNNERS_HPP_
+#endif // PAIRS_LIB_CORO_RUNNERS_HPP_

@@ -41,7 +41,7 @@ namespace pairs_lib
      * Use std::get<node_info_t>(element_info) or std::get<topic_info_t>(element_info) to access the specific type.
      *
      * \see ErrorPublisher for the publishing side that nodes use to report errors.
-     * \see ErroGraphViewer at https://github.com/ctu-mrs/mrs_errorgraph_viewer/blob/ros2/src/errorgraph_viewer.cpp
+     * \see ErroGraphViewer at https://github.com/ctu-pairs/mrs_errorgraph_viewer/blob/ros2/src/errorgraph_viewer.cpp
      * for an example of using the Errorgraph and visualizing it.
      */
     class Errorgraph

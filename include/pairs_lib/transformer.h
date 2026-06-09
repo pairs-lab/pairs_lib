@@ -66,7 +66,7 @@ namespace pairs_lib
    * \brief A convenience wrapper class for ROS's native TF2 API to simplify transforming of various messages.
    *
    * Implements optional automatic frame prefix deduction, seamless transformation lattitude/longitude coordinates and UTM coordinates, simple transformation of
-   * MRS messages etc.
+   * PAIRS messages etc.
    */
   /* class Transformer //{ */
 

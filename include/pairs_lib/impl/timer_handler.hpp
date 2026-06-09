@@ -1,7 +1,7 @@
-#ifndef MRS_TIMER_HPP
-#define MRS_TIMER_HPP
+#ifndef PAIRS_TIMER_HPP
+#define PAIRS_TIMER_HPP
 
-#ifndef MRS_TIMER_H
+#ifndef PAIRS_TIMER_H
 #include <pairs_lib/timer_handler.h>
 #endif
 
@@ -58,4 +58,4 @@ namespace pairs_lib
 
 } // namespace pairs_lib
 
-#endif // MRS_TIMER_HPP
+#endif // PAIRS_TIMER_HPP

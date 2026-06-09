@@ -135,7 +135,7 @@ namespace pairs_lib
 
       rclcpp::Publisher<pairs_msgs::msg::ErrorgraphElement>::SharedPtr publisher_;
 
-      std::unique_ptr<pairs_lib::MRSTimer> timer_publisher_;
+      std::unique_ptr<pairs_lib::PAIRSTimer> timer_publisher_;
 
       void publishErrors();
     };
