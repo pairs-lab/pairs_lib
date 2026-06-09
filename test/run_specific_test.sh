@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+while [ ! -e "build/COLCON_IGNORE" ]; do
+  cd ..
+  if [[ `pwd` == "/" ]]; then
+    # we reached the root and didn't find the build/COLCON_IGNORE file - that's a fail!
+    echo "Cannot compile, probably not in a workspace (if you want to create a new workspace, call \"colcon init\" in its root first)".
+    exit 1
+  fi
+done
+
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+
+colcon test-result --delete-yes
+
+colcon test --packages-select pairs_lib --ctest-args -R 'param_provider'
+# colcon test --packages-select pairs_lib --ctest-args -R 'param_loader'
+# colcon test --packages-select pairs_lib --ctest-args -R 'dynparam_mgr'
+# colcon test --packages-select pairs_lib --ctest-args -R 'timeout_manager'
+colcon test --packages-select pairs_lib --ctest-args -R 'error_publisher'
+
+colcon test-result --all --verbose

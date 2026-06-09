@@ -1,10 +1,13 @@
 name: ros_package_build
 
 on:
+
   push:
-    branches: [ master ]
+    branches: [ ros2 ]
+
     paths-ignore:
       - '**/README.md'
+
   workflow_dispatch:
 
 concurrency:
@@ -14,26 +17,6 @@ concurrency:
 jobs:
 
   build:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up ROS Noetic
-        uses: ros-tooling/setup-ros@v0.7
-        with:
-          required-ros-distributions: noetic
-
-      - name: Install dependencies
-        run: |
-          sudo apt-get install -y python3-catkin-tools python3-rosdep \
-            libyaml-cpp-dev libeigen3-dev libopencv-dev
-          rosdep update
-
-      - name: Build
-        run: |
-          source /opt/ros/noetic/setup.bash
-          mkdir -p ~/catkin_ws/src
-          cp -r . ~/catkin_ws/src/pairs_lib
-          cd ~/catkin_ws
-          rosdep install --from-paths src --ignore-src -r -y
-          catkin build pairs_lib
+    uses: ctu-mrs/ci_scripts/.github/workflows/ros_package_build.yml@ros2
+    secrets:
+      PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
