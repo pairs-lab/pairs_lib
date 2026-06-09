@@ -491,16 +491,16 @@ TEST(TESTSuite, transform_single)
 
 //}
 
-/* TEST(TESTSuite, mrs_reference_test) //{ */
+/* TEST(TESTSuite, pairs_reference_test) //{ */
 
-TEST(TESTSuite, mrs_reference_test)
+TEST(TESTSuite, pairs_reference_test)
 {
 
   ROS_INFO("[%s]: Testing the pairs_msgs::ReferenceStamped transformation", ros::this_node::getName().c_str());
 
   int result = 1;
 
-  auto tfr = pairs_lib::Transformer("Transformer_mrs_reference_test");
+  auto tfr = pairs_lib::Transformer("Transformer_pairs_reference_test");
   tfr.setDefaultPrefix("uav66");
 
   publish_transforms();
