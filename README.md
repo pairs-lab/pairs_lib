@@ -2,7 +2,7 @@
 
 PAIRS shared C++ utility library — attitude math, filters, parameter loading, geometry utilities, ROS transformations.
 
-Mirrors the structure of [ctu-mrs/mrs_lib](https://github.com/ctu-mrs/mrs_lib) adapted for the PAIRS platform.
+Ported from the BSD-3-Clause [ctu-mrs/mrs_lib](https://github.com/ctu-mrs/mrs_lib) and adapted for the PAIRS platform (`mrs_lib` → `pairs_lib`, `mrs_msgs` → `pairs_msgs`).
 
 ## Branches
 
@@ -34,3 +34,9 @@ Mirrors the structure of [ctu-mrs/mrs_lib](https://github.com/ctu-mrs/mrs_lib) a
 | `PairsLib_DynamicPublisher` | Type-erased dynamic topic publisher |
 | `PairsLib_ImagePublisher` | Throttled image publisher |
 | `PairsLib_OdomLKF` | Linear Kalman filter for odometry |
+
+Header-only utilities (Kalman filters, UKF/LKF/NCKF/DKF, RHEIV, repredictor, subscribe/publisher/service handlers, vector converters) live under `include/pairs_lib/`.
+
+## License
+
+BSD 3-Clause. Original copyright © 2020 the Multi-robot Systems (MRS) group, Czech Technical University in Prague; PAIRS adaptations © 2024 Thanh Nguyen Canh. See [LICENSE](LICENSE).

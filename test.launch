@@ -1,0 +1,15 @@
+<launch>
+
+  <arg name="debug" default="false" />
+  <arg unless="$(arg debug)" name="launch_prefix" value=""/>
+  <arg     if="$(arg debug)" name="launch_prefix" value="debug_roslaunch"/>
+
+  <node pkg="pairs_lib" type="test_transformer" name="pairs_lib_test" output="screen" launch-prefix="$(arg launch_prefix)" >
+
+    <rosparam file="$(find pairs_lib)/test/param_loader/test.yaml" />
+    <param name="static_params_file" value="$(find pairs_lib)/test/param_loader/test_static.yaml" />
+
+  </node>
+
+</launch>
+
