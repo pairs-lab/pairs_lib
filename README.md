@@ -8,7 +8,7 @@ Ported from the BSD-3-Clause [ctu-mrs/mrs_lib](https://github.com/ctu-mrs/mrs_li
 
 | Branch | ROS version | Build system |
 |--------|-------------|--------------|
-| `master` | ROS 1 Noetic | catkin |
+| `ros1` | ROS 1 Noetic | catkin |
 | `ros2` | ROS 2 Jazzy | ament_cmake |
 
 ## Libraries

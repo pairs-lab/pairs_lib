@@ -1,25 +1,42 @@
 name: ros_build_test
 
 on:
-
   push:
     branches: [ devel ]
-
     paths-ignore:
       - '**/README.md'
-
   pull_request:
-    branches: [ master ]
-
+    branches: [ ros1 ]
   workflow_dispatch:
 
 concurrency:
-  group: ${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
 
-  build:
-    uses: ctu-mrs/ci_scripts/.github/workflows/ros_build_test.yml@master
-    secrets:
-      PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
+  build_and_test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up ROS Noetic
+        uses: ros-tooling/setup-ros@v0.7
+        with:
+          required-ros-distributions: noetic
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install -y python3-catkin-tools python3-rosdep \
+            libyaml-cpp-dev libeigen3-dev libopencv-dev
+          rosdep update
+
+      - name: Build and test
+        run: |
+          source /opt/ros/noetic/setup.bash
+          mkdir -p ~/catkin_ws/src
+          cp -r . ~/catkin_ws/src/pairs_lib
+          cd ~/catkin_ws
+          rosdep install --from-paths src --ignore-src -r -y || true
+          catkin build pairs_lib --cmake-args -DPAIRS_ENABLE_TESTING=1
+          catkin test pairs_lib
