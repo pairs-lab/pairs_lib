@@ -2,8 +2,6 @@
 
 PAIRS shared C++ utility library — attitude math, filters, parameter loading, geometry utilities, ROS transformations.
 
-Ported from the BSD-3-Clause [ctu-mrs/pairs_lib](https://github.com/pairs-lab/pairs_lib) and adapted for the PAIRS platform (`pairs_lib` → `pairs_lib`, `pairs_msgs` → `pairs_msgs`).
-
 ## Branches
 
 | Branch | ROS version | Build system |
@@ -39,4 +37,4 @@ Header-only utilities (Kalman filters, UKF/LKF/NCKF/DKF, RHEIV, repredictor, sub
 
 ## License
 
-BSD 3-Clause. Original copyright © 2020 the Multi-robot Systems (PAIRS) group, Czech Technical University in Prague; PAIRS adaptations © 2024 Thanh Nguyen Canh. See [LICENSE](LICENSE).
+BSD 3-Clause. Derived from the CTU-MRS `pairs_lib` package; the original copyright is retained in [LICENSE](LICENSE).
